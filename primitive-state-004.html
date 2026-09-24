@@ -120,6 +120,25 @@
                 font-variant-numeric: tabular-nums;
             }
 
+            .track-seek {
+                appearance: none;
+                -webkit-appearance: none;
+                border: 0;
+                background: transparent;
+                padding: 0;
+                margin: 0;
+                text-align: left;
+                cursor: pointer;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+
+            .track-seek:hover,
+            .track-seek:focus-visible {
+                color: #fff;
+                outline: none;
+            }
+
             .track-info {
                 flex: 1;
                 min-width: 0;
@@ -240,7 +259,7 @@
             <div class="tracklist" id="tracklist">
                 <div class="track" data-time="0">
                     <div class="track-number">01</div>
-                    <div class="track-time">00:00</div>
+                    <button class="track-time track-seek" type="button" data-seek="0" aria-label="Jump to 00:00">00:00</button>
                     <div class="track-info">
                         <div class="track-artist">Ben Klock</div>
                         <div class="track-title">Prefix</div>
@@ -257,7 +276,7 @@
 
                 <div class="track" data-time="222">
                     <div class="track-number">02</div>
-                    <div class="track-time">03:42</div>
+                    <button class="track-time track-seek" type="button" data-seek="222" aria-label="Jump to 03:42">03:42</button>
                     <div class="track-info">
                         <div class="track-artist">Franco Rossi</div>
                         <div class="track-title">Antiqua</div>
@@ -274,7 +293,7 @@
 
                 <div class="track" data-time="441">
                     <div class="track-number">03</div>
-                    <div class="track-time">07:21</div>
+                    <button class="track-time track-seek" type="button" data-seek="441" aria-label="Jump to 07:21">07:21</button>
                     <div class="track-info">
                         <div class="track-artist">Unicel</div>
                         <div class="track-title">Cells</div>
@@ -291,7 +310,7 @@
 
                 <div class="track" data-time="655">
                     <div class="track-number">04</div>
-                    <div class="track-time">10:55</div>
+                    <button class="track-time track-seek" type="button" data-seek="655" aria-label="Jump to 10:55">10:55</button>
                     <div class="track-info">
                         <div class="track-artist">Nortsch</div>
                         <div class="track-title">Xeno</div>
@@ -308,7 +327,7 @@
 
                 <div class="track" data-time="922">
                     <div class="track-number">05</div>
-                    <div class="track-time">15:22</div>
+                    <button class="track-time track-seek" type="button" data-seek="922" aria-label="Jump to 15:22">15:22</button>
                     <div class="track-info">
                         <div class="track-artist">Ricardo Garduno</div>
                         <div class="track-title">Heartbroken</div>
@@ -325,7 +344,7 @@
 
                 <div class="track" data-time="1090">
                     <div class="track-number">06</div>
-                    <div class="track-time">18:10</div>
+                    <button class="track-time track-seek" type="button" data-seek="1090" aria-label="Jump to 18:10">18:10</button>
                     <div class="track-info">
                         <div class="track-artist">Mark Broom</div>
                         <div class="track-title">VV2</div>
@@ -342,7 +361,7 @@
 
                 <div class="track" data-time="1266">
                     <div class="track-number">07</div>
-                    <div class="track-time">21:06</div>
+                    <button class="track-time track-seek" type="button" data-seek="1266" aria-label="Jump to 21:06">21:06</button>
                     <div class="track-info">
                         <div class="track-artist">Disguised</div>
                         <div class="track-title">Crusher Wheels</div>
@@ -359,7 +378,7 @@
 
                 <div class="track" data-time="1460">
                     <div class="track-number">08</div>
-                    <div class="track-time">24:20</div>
+                    <button class="track-time track-seek" type="button" data-seek="1460" aria-label="Jump to 24:20">24:20</button>
                     <div class="track-info">
                         <div class="track-artist">Red Rooms</div>
                         <div class="track-title">Endurance</div>
@@ -376,7 +395,7 @@
 
                 <div class="track" data-time="1658">
                     <div class="track-number">09</div>
-                    <div class="track-time">27:38</div>
+                    <button class="track-time track-seek" type="button" data-seek="1658" aria-label="Jump to 27:38">27:38</button>
                     <div class="track-info">
                         <div class="track-artist">CULT</div>
                         <div class="track-title">
@@ -395,7 +414,7 @@
 
                 <div class="track" data-time="1849">
                     <div class="track-number">10</div>
-                    <div class="track-time">30:49</div>
+                    <button class="track-time track-seek" type="button" data-seek="1849" aria-label="Jump to 30:49">30:49</button>
                     <div class="track-info">
                         <div class="track-artist">KUSS</div>
                         <div class="track-title">Light In Sight</div>
@@ -412,7 +431,7 @@
 
                 <div class="track" data-time="2137">
                     <div class="track-number">11</div>
-                    <div class="track-time">35:37</div>
+                    <button class="track-time track-seek" type="button" data-seek="2137" aria-label="Jump to 35:37">35:37</button>
                     <div class="track-info">
                         <div class="track-artist">Regent</div>
                         <div class="track-title">Interpolation</div>
@@ -429,7 +448,7 @@
 
                 <div class="track" data-time="2405">
                     <div class="track-number">12</div>
-                    <div class="track-time">40:05</div>
+                    <button class="track-time track-seek" type="button" data-seek="2405" aria-label="Jump to 40:05">40:05</button>
                     <div class="track-info">
                         <div class="track-artist">Kashpitzky</div>
                         <div class="track-title">Avalon</div>
@@ -446,7 +465,7 @@
 
                 <div class="track" data-time="2631">
                     <div class="track-number">13</div>
-                    <div class="track-time">43:51</div>
+                    <button class="track-time track-seek" type="button" data-seek="2631" aria-label="Jump to 43:51">43:51</button>
                     <div class="track-info">
                         <div class="track-artist">Marco Bailey, DJ Dextro</div>
                         <div class="track-title">Shade (DJ Dextro Remix)</div>
@@ -463,7 +482,7 @@
 
                 <div class="track" data-time="2845">
                     <div class="track-number">14</div>
-                    <div class="track-time">47:25</div>
+                    <button class="track-time track-seek" type="button" data-seek="2845" aria-label="Jump to 47:25">47:25</button>
                     <div class="track-info">
                         <div class="track-artist">Sciahri</div>
                         <div class="track-title">Two Letters</div>
@@ -480,7 +499,7 @@
 
                 <div class="track" data-time="3097">
                     <div class="track-number">15</div>
-                    <div class="track-time">51:37</div>
+                    <button class="track-time track-seek" type="button" data-seek="3097" aria-label="Jump to 51:37">51:37</button>
                     <div class="track-info">
                         <div class="track-artist">VEILBORN</div>
                         <div class="track-title">Coded Sword</div>
@@ -497,7 +516,7 @@
 
                 <div class="track" data-time="3337">
                     <div class="track-number">16</div>
-                    <div class="track-time">55:37</div>
+                    <button class="track-time track-seek" type="button" data-seek="3337" aria-label="Jump to 55:37">55:37</button>
                     <div class="track-info">
                         <div class="track-artist">Fhase 87</div>
                         <div class="track-title">French.Loops. 21.B</div>
@@ -664,6 +683,26 @@
                         "Could not copy the link. Copy it manually from the address bar.";
                 }
             }
+
+            /*
+             * ------------------------------------------------------------
+             * Clickable timestamps
+             * ------------------------------------------------------------
+             */
+
+            tracks.forEach(function (track) {
+                const timeButton = track.querySelector(".track-seek");
+
+                if (!timeButton) {
+                    return;
+                }
+
+                timeButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    seekToTrack(track, true);
+                });
+            });
 
             /*
              * ------------------------------------------------------------

@@ -179,6 +179,12 @@
                 background: #222;
             }
 
+            .tracklist-loading {
+                padding: 18px 0;
+                color: var(--muted);
+                font-size: 13px;
+            }
+
             .status {
                 margin-top: 18px;
                 color: var(--muted);
@@ -257,279 +263,9 @@
             </div>
 
             <div class="tracklist" id="tracklist">
-                <div class="track" data-time="0">
-                    <div class="track-number">01</div>
-                    <button class="track-time track-seek" type="button" data-seek="0" aria-label="Jump to 00:00">00:00</button>
-                    <div class="track-info">
-                        <div class="track-artist">Ben Klock</div>
-                        <div class="track-title">Prefix</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
+                <div class="tracklist-loading">Loading tracklist from Mixcloud…</div>
+            </div>
 
-                <div class="track" data-time="222">
-                    <div class="track-number">02</div>
-                    <button class="track-time track-seek" type="button" data-seek="222" aria-label="Jump to 03:42">03:42</button>
-                    <div class="track-info">
-                        <div class="track-artist">Franco Rossi</div>
-                        <div class="track-title">Antiqua</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="441">
-                    <div class="track-number">03</div>
-                    <button class="track-time track-seek" type="button" data-seek="441" aria-label="Jump to 07:21">07:21</button>
-                    <div class="track-info">
-                        <div class="track-artist">Unicel</div>
-                        <div class="track-title">Cells</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="655">
-                    <div class="track-number">04</div>
-                    <button class="track-time track-seek" type="button" data-seek="655" aria-label="Jump to 10:55">10:55</button>
-                    <div class="track-info">
-                        <div class="track-artist">Nortsch</div>
-                        <div class="track-title">Xeno</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="922">
-                    <div class="track-number">05</div>
-                    <button class="track-time track-seek" type="button" data-seek="922" aria-label="Jump to 15:22">15:22</button>
-                    <div class="track-info">
-                        <div class="track-artist">Ricardo Garduno</div>
-                        <div class="track-title">Heartbroken</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="1090">
-                    <div class="track-number">06</div>
-                    <button class="track-time track-seek" type="button" data-seek="1090" aria-label="Jump to 18:10">18:10</button>
-                    <div class="track-info">
-                        <div class="track-artist">Mark Broom</div>
-                        <div class="track-title">VV2</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="1266">
-                    <div class="track-number">07</div>
-                    <button class="track-time track-seek" type="button" data-seek="1266" aria-label="Jump to 21:06">21:06</button>
-                    <div class="track-info">
-                        <div class="track-artist">Disguised</div>
-                        <div class="track-title">Crusher Wheels</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="1460">
-                    <div class="track-number">08</div>
-                    <button class="track-time track-seek" type="button" data-seek="1460" aria-label="Jump to 24:20">24:20</button>
-                    <div class="track-info">
-                        <div class="track-artist">Red Rooms</div>
-                        <div class="track-title">Endurance</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="1658">
-                    <div class="track-number">09</div>
-                    <button class="track-time track-seek" type="button" data-seek="1658" aria-label="Jump to 27:38">27:38</button>
-                    <div class="track-info">
-                        <div class="track-artist">CULT</div>
-                        <div class="track-title">
-                            Next Door Hates Me (Khas Remix)
-                        </div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="1849">
-                    <div class="track-number">10</div>
-                    <button class="track-time track-seek" type="button" data-seek="1849" aria-label="Jump to 30:49">30:49</button>
-                    <div class="track-info">
-                        <div class="track-artist">KUSS</div>
-                        <div class="track-title">Light In Sight</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="2137">
-                    <div class="track-number">11</div>
-                    <button class="track-time track-seek" type="button" data-seek="2137" aria-label="Jump to 35:37">35:37</button>
-                    <div class="track-info">
-                        <div class="track-artist">Regent</div>
-                        <div class="track-title">Interpolation</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="2405">
-                    <div class="track-number">12</div>
-                    <button class="track-time track-seek" type="button" data-seek="2405" aria-label="Jump to 40:05">40:05</button>
-                    <div class="track-info">
-                        <div class="track-artist">Kashpitzky</div>
-                        <div class="track-title">Avalon</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="2631">
-                    <div class="track-number">13</div>
-                    <button class="track-time track-seek" type="button" data-seek="2631" aria-label="Jump to 43:51">43:51</button>
-                    <div class="track-info">
-                        <div class="track-artist">Marco Bailey, DJ Dextro</div>
-                        <div class="track-title">Shade (DJ Dextro Remix)</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="2845">
-                    <div class="track-number">14</div>
-                    <button class="track-time track-seek" type="button" data-seek="2845" aria-label="Jump to 47:25">47:25</button>
-                    <div class="track-info">
-                        <div class="track-artist">Sciahri</div>
-                        <div class="track-title">Two Letters</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="3097">
-                    <div class="track-number">15</div>
-                    <button class="track-time track-seek" type="button" data-seek="3097" aria-label="Jump to 51:37">51:37</button>
-                    <div class="track-info">
-                        <div class="track-artist">VEILBORN</div>
-                        <div class="track-title">Coded Sword</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
-
-                <div class="track" data-time="3337">
-                    <div class="track-number">16</div>
-                    <button class="track-time track-seek" type="button" data-seek="3337" aria-label="Jump to 55:37">55:37</button>
-                    <div class="track-info">
-                        <div class="track-artist">Fhase 87</div>
-                        <div class="track-title">French.Loops. 21.B</div>
-                    </div>
-                    <div class="track-actions">
-                        <button class="track-action play-button">
-                            Play from here
-                        </button>
-                        <button class="track-action copy-button">
-                            Copy link
-                        </button>
-                    </div>
-                </div>
             </div>
 
             <div class="status" id="status">Loading Mixcloud player…</div>
@@ -549,9 +285,140 @@
         <script>
             const iframe = document.getElementById("mixcloud-player");
             const status = document.getElementById("status");
-            const tracks = Array.from(document.querySelectorAll(".track"));
+            const tracklist = document.getElementById("tracklist");
+            let tracks = [];
 
             const widget = Mixcloud.PlayerWidget(iframe);
+
+            const MIXCLOUD_API_URL =
+                "https://api.mixcloud.com/anttoss/primitive-state-004-hypnotic-mental-techno/";
+
+            // Local fallback: keeps the page usable if the public API is unavailable.
+            const FALLBACK_TRACKS = [
+                [0, "Ben Klock", "Prefix"],
+                [222, "Franco Rossi", "Antiqua"],
+                [441, "Unicel", "Cells"],
+                [655, "Nortsch", "Xeno"],
+                [922, "Ricardo Garduno", "Heartbroken"],
+                [1090, "Mark Broom", "VV2"],
+                [1266, "Disguised", "Crusher Wheels"],
+                [1460, "Red Rooms", "Endurance"],
+                [1658, "CULT", "Next Door Hates Me (Khas Remix)"],
+                [1849, "KUSS", "Light In Sight"],
+                [2137, "Regent", "Interpolation"],
+                [2405, "Kashpitzky", "Avalon"],
+                [2631, "Marco Bailey, DJ Dextro", "Shade (DJ Dextro Remix)"],
+                [2845, "Sciahri", "Two Letters"],
+                [3097, "VEILBORN", "Coded Sword"],
+                [3337, "Fhase 87", "French.Loops. 21.B"]
+            ];
+
+            function formatTime(seconds) {
+                const total = Math.max(0, Math.floor(Number(seconds) || 0));
+                const minutes = Math.floor(total / 60);
+                const secs = String(total % 60).padStart(2, "0");
+                return minutes + ":" + secs;
+            }
+
+            function escapeHtml(value) {
+                return String(value ?? "")
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+
+            function normalizeSections(data) {
+                const sections = Array.isArray(data?.sections)
+                    ? data.sections
+                    : Array.isArray(data?.data?.sections)
+                      ? data.data.sections
+                      : [];
+
+                return sections
+                    .map(function (section) {
+                        const start = Number(section.start_time);
+                        const artist = section.artist;
+                        const song = section.song;
+
+                        if (!Number.isFinite(start) || start < 0 || !artist || !song) {
+                            return null;
+                        }
+
+                        return {
+                            time: Math.floor(start),
+                            artist: String(artist),
+                            title: String(song)
+                        };
+                    })
+                    .filter(Boolean)
+                    .sort(function (a, b) {
+                        return a.time - b.time;
+                    });
+            }
+
+            function renderTracklist(sectionData, sourceLabel) {
+                tracklist.innerHTML = sectionData
+                    .map(function (item, index) {
+                        const time = formatTime(item.time);
+
+                        return `
+                            <div class="track" data-time="${item.time}">
+                                <div class="track-number">${String(index + 1).padStart(2, "0")}</div>
+                                <button class="track-time track-seek" type="button" data-seek="${item.time}" aria-label="Jump to ${time}">${time}</button>
+                                <div class="track-info">
+                                    <div class="track-artist">${escapeHtml(item.artist)}</div>
+                                    <div class="track-title">${escapeHtml(item.title)}</div>
+                                </div>
+                                <div class="track-actions">
+                                    <button class="track-action play-button" type="button">Play from here</button>
+                                    <button class="track-action copy-button" type="button">Copy link</button>
+                                </div>
+                            </div>`;
+                    })
+                    .join("");
+
+                tracks = Array.from(document.querySelectorAll(".track"));
+                wireTrackButtons();
+
+                status.textContent =
+                    sourceLabel + " · " + tracks.length + " tracks loaded";
+            }
+
+            async function loadTracklist() {
+                try {
+                    const response = await fetch(MIXCLOUD_API_URL, {
+                        headers: { Accept: "application/json" }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Mixcloud API returned HTTP " + response.status);
+                    }
+
+                    const data = await response.json();
+                    const sections = normalizeSections(data);
+
+                    if (!sections.length) {
+                        throw new Error("No public track sections found in the API response.");
+                    }
+
+                    renderTracklist(sections, "Mixcloud API");
+                } catch (error) {
+                    console.warn("Could not load Mixcloud tracklist:", error);
+
+                    renderTracklist(
+                        FALLBACK_TRACKS.map(function (item) {
+                            return {
+                                time: item[0],
+                                artist: item[1],
+                                title: item[2]
+                            };
+                        }),
+                        "Saved fallback tracklist"
+                    );
+                }
+            }
 
             /*
              * ------------------------------------------------------------
@@ -710,27 +577,38 @@
              * ------------------------------------------------------------
              */
 
-            tracks.forEach(function (track) {
-                const playButton = track.querySelector(".play-button");
-                const copyButton = track.querySelector(".copy-button");
+            function wireTrackButtons() {
+                tracks.forEach(function (track) {
+                    const playButton = track.querySelector(".play-button");
+                    const copyButton = track.querySelector(".copy-button");
+                    const timeButton = track.querySelector(".track-seek");
 
-                playButton.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    seekToTrack(track, true);
-                });
+                    playButton.addEventListener("click", function (event) {
+                        event.stopPropagation();
+                        seekToTrack(track, true);
+                    });
 
-                copyButton.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    copyTrackLink(track, copyButton);
-                });
+                    copyButton.addEventListener("click", function (event) {
+                        event.stopPropagation();
+                        copyTrackLink(track, copyButton);
+                    });
 
-                /*
-                 * Clicking anywhere on the track also seeks.
-                 */
-                track.addEventListener("click", function () {
-                    seekToTrack(track, true);
+                    timeButton.addEventListener("click", function (event) {
+                        event.stopPropagation();
+                        seekToTrack(track, true);
+                    });
+
+                    track.addEventListener("click", function () {
+                        seekToTrack(track, true);
+                    });
                 });
-            });
+            }
+
+            /*
+             * Load the public Mixcloud tracklist. The API documents CORS-enabled
+             * reads and exposes section start_time/artist/song values.
+             */
+            loadTracklist();
 
             /*
              * ------------------------------------------------------------

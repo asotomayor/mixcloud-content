@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Primitive State #001 — Hypnotic / Mental Techno</title>
+<style>
+:root {
+    --bg:#0b0b0b; --panel:#151515; --panel-hover:#1d1d1d;
+    --border:#2a2a2a; --text:#f2f2f2; --muted:#8e8e8e; --active:#242424;
+}
+* { box-sizing:border-box; }
+body {
+    margin:0; padding:40px 20px; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+.container { width:100%; max-width:850px; margin:0 auto; }
+h1 { margin:0; font-size:30px; font-weight:600; letter-spacing:-.5px; }
+.subtitle { margin-top:8px; color:var(--muted); font-size:15px; }
+.player { margin-top:28px; width:100%; overflow:hidden; border-radius:10px; background:#111; }
+.player iframe { display:block; width:100%; height:180px; border:0; }
+.tracklist { margin-top:28px; display:flex; flex-direction:column; gap:6px; }
+.track {
+    display:flex; align-items:center; width:100%; padding:12px 14px;
+    border:1px solid var(--border); border-radius:7px; background:var(--panel);
+    color:var(--text); text-align:left; cursor:pointer;
+    transition:background .15s ease,border-color .15s ease,transform .1s ease;
+}
+.track:hover { background:var(--panel-hover); border-color:#444; }
+.track:active { transform:scale(.995); }
+.track.active { background:var(--active); border-color:#666; }
+.track-number { width:34px; flex-shrink:0; color:var(--muted); font-size:13px; font-variant-numeric:tabular-nums; }
+.track-time { width:64px; flex-shrink:0; color:var(--muted); font-size:13px; font-variant-numeric:tabular-nums; }
+.track-info { flex:1; min-width:0; }
+.track-artist { font-size:14px; font-weight:600; }
+.track-title { margin-top:2px; color:#b5b5b5; font-size:14px; }
+.track-actions { display:flex; gap:6px; margin-left:12px; flex-shrink:0; }
+.track-action {
+    padding:5px 8px; border:1px solid #333; border-radius:5px;
+    background:transparent; color:#aaa; font-size:11px; cursor:pointer; white-space:nowrap;
+}
+.track-action:hover { color:#fff; border-color:#555; background:#222; }
+.status { margin-top:18px; color:var(--muted); font-size:13px; min-height:20px; }
+.mixcloud-link {
+    display:inline-block; margin-top:18px; color:var(--text); font-size:14px;
+    text-decoration:none; border-bottom:1px solid #555; padding-bottom:2px;
+}
+.mixcloud-link:hover { border-color:#fff; }
+.copied { color:#fff; }
+@media (max-width:600px) {
+    body { padding:24px 12px; } h1 { font-size:24px; }
+    .player iframe { height:160px; } .track { padding:11px 10px; }
+    .track-number { width:28px; } .track-time { width:60px; }
+    .track-actions { margin-left:8px; } .track-action { padding:5px 6px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Primitive State #001 — Hypnotic / Mental Techno</h1>
+<div class="subtitle">Hypnotic / Mental Techno · ~58 min</div>
+
+<div class="player">
+<iframe id="mixcloud-player"
+src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&hide_tracklist=1&feed=%2Fanttoss%2Fprimitive-state-001-hypnotic-mental-techno%2F"
+allow="autoplay" title="Primitive State #001 — Mixcloud player"></iframe>
+</div>
+
+<div class="tracklist" id="tracklist">
+                <div class="track" data-time="0">
+                    <div class="track-number">01</div>
+                    <div class="track-time">00:00</div>
+                    <div class="track-info">
+                        <div class="track-artist">Rill</div>
+                        <div class="track-title">Anobium</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="196">
+                    <div class="track-number">02</div>
+                    <div class="track-time">03:16</div>
+                    <div class="track-info">
+                        <div class="track-artist">Anteac</div>
+                        <div class="track-title">Meraki III</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="302">
+                    <div class="track-number">03</div>
+                    <div class="track-time">05:02</div>
+                    <div class="track-info">
+                        <div class="track-artist">CVNSUMED</div>
+                        <div class="track-title">Kurinkatto</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="410">
+                    <div class="track-number">04</div>
+                    <div class="track-time">06:50</div>
+                    <div class="track-info">
+                        <div class="track-artist">Marco Bailey</div>
+                        <div class="track-title">Red (Original Mix)</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="612">
+                    <div class="track-number">05</div>
+                    <div class="track-time">10:12</div>
+                    <div class="track-info">
+                        <div class="track-artist">Marcal</div>
+                        <div class="track-title">Swindle</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="759">
+                    <div class="track-number">06</div>
+                    <div class="track-time">12:39</div>
+                    <div class="track-info">
+                        <div class="track-artist">Juari</div>
+                        <div class="track-title">Presence (Original Mix)</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="960">
+                    <div class="track-number">07</div>
+                    <div class="track-time">16:00</div>
+                    <div class="track-info">
+                        <div class="track-artist">Marco Bailey</div>
+                        <div class="track-title">Royal Wolf</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="1076">
+                    <div class="track-number">08</div>
+                    <div class="track-time">17:56</div>
+                    <div class="track-info">
+                        <div class="track-artist">Argie</div>
+                        <div class="track-title">Nebula (Squaric & Franco Rossi Remix)</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="1308">
+                    <div class="track-number">09</div>
+                    <div class="track-time">21:48</div>
+                    <div class="track-info">
+                        <div class="track-artist">KUSS</div>
+                        <div class="track-title">Back</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="1494">
+                    <div class="track-number">10</div>
+                    <div class="track-time">24:54</div>
+                    <div class="track-info">
+                        <div class="track-artist">Anteac</div>
+                        <div class="track-title">Planet 43</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="1688">
+                    <div class="track-number">11</div>
+                    <div class="track-time">28:08</div>
+                    <div class="track-info">
+                        <div class="track-artist">Franco Rossi</div>
+                        <div class="track-title">Marina Mercante</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="1837">
+                    <div class="track-number">12</div>
+                    <div class="track-time">30:37</div>
+                    <div class="track-info">
+                        <div class="track-artist">Jesica Falaschi</div>
+                        <div class="track-title">Rumours (Franco Rossi Remix)</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="2059">
+                    <div class="track-number">13</div>
+                    <div class="track-time">34:19</div>
+                    <div class="track-info">
+                        <div class="track-artist">Jason Case</div>
+                        <div class="track-title">Boosh­auts</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="2276">
+                    <div class="track-number">14</div>
+                    <div class="track-time">37:56</div>
+                    <div class="track-info">
+                        <div class="track-artist">Jason Case</div>
+                        <div class="track-title">Hectoplasm</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="2482">
+                    <div class="track-number">15</div>
+                    <div class="track-time">41:22</div>
+                    <div class="track-info">
+                        <div class="track-artist">Yan Cook</div>
+                        <div class="track-title">22-44</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="2655">
+                    <div class="track-number">16</div>
+                    <div class="track-time">44:15</div>
+                    <div class="track-info">
+                        <div class="track-artist">Goncalo M</div>
+                        <div class="track-title">Antimatter</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="2849">
+                    <div class="track-number">17</div>
+                    <div class="track-time">47:29</div>
+                    <div class="track-info">
+                        <div class="track-artist">osado</div>
+                        <div class="track-title">CATWALK</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="3055">
+                    <div class="track-number">18</div>
+                    <div class="track-time">50:55</div>
+                    <div class="track-info">
+                        <div class="track-artist">Luciano Esse</div>
+                        <div class="track-title">Chantilly</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+                <div class="track" data-time="3277">
+                    <div class="track-number">19</div>
+                    <div class="track-time">54:37</div>
+                    <div class="track-info">
+                        <div class="track-artist">TWIENA</div>
+                        <div class="track-title">Climax</div>
+                    </div>
+                    <div class="track-actions">
+                        <button class="track-action play-button">Play from here</button>
+                        <button class="track-action copy-button">Copy link</button>
+                    </div>
+                </div>
+</div>
+
+<div class="status" id="status">Loading Mixcloud player…</div>
+<a class="mixcloud-link"
+href="https://www.mixcloud.com/anttoss/primitive-state-001-hypnotic-mental-techno/"
+target="_blank" rel="noopener">Open on Mixcloud ↗</a>
+</div>
+
+<script src="https://widget.mixcloud.com/media/js/widgetApi.js"></script>
+<script>
+const iframe = document.getElementById("mixcloud-player");
+const status = document.getElementById("status");
+const tracks = Array.from(document.querySelectorAll(".track"));
+const widget = Mixcloud.PlayerWidget(iframe);
+
+function setActiveTrack(track) {
+    tracks.forEach(item => item.classList.remove("active"));
+    if (track) track.classList.add("active");
+}
+function getTrackForTime(seconds) {
+    let current = null;
+    for (const track of tracks) {
+        if (seconds >= Number(track.dataset.time)) current = track;
+        else break;
+    }
+    return current;
+}
+function updateUrl(seconds) {
+    const url = new URL(window.location.href);
+    if (seconds === 0) url.searchParams.delete("t");
+    else url.searchParams.set("t", Math.round(seconds));
+    window.history.replaceState({}, "", url);
+}
+function getInitialTime() {
+    const value = Number(new URLSearchParams(window.location.search).get("t"));
+    return Number.isFinite(value) && value >= 0 ? value : null;
+}
+async function seekToTrack(track, updateBrowserUrl=true) {
+    const seconds = Number(track.dataset.time);
+    status.textContent = "Seeking to " + track.querySelector(".track-time").textContent + "…";
+    try {
+        const success = await widget.seek(seconds);
+        if (success) {
+            setActiveTrack(track);
+            if (updateBrowserUrl) updateUrl(seconds);
+            status.textContent = "Starting at " +
+                track.querySelector(".track-time").textContent + " — " +
+                track.querySelector(".track-artist").textContent + " – " +
+                track.querySelector(".track-title").textContent;
+        } else status.textContent = "Mixcloud did not allow the seek.";
+    } catch (error) {
+        console.error(error);
+        status.textContent = "Unable to seek in the Mixcloud player.";
+    }
+}
+async function copyTrackLink(track, button) {
+    const seconds = Number(track.dataset.time);
+    const url = new URL(window.location.href);
+    if (seconds === 0) url.searchParams.delete("t");
+    else url.searchParams.set("t", seconds);
+    try {
+        await navigator.clipboard.writeText(url.toString());
+        const original = button.textContent;
+        button.textContent = "Copied!";
+        button.classList.add("copied");
+        setTimeout(() => {
+            button.textContent = original;
+            button.classList.remove("copied");
+        }, 1500);
+    } catch (error) {
+        console.error(error);
+        status.textContent = "Could not copy the link. Copy it manually from the address bar.";
+    }
+}
+
+tracks.forEach(track => {
+    const playButton = track.querySelector(".play-button");
+    const copyButton = track.querySelector(".copy-button");
+
+    playButton.addEventListener("click", event => {
+        event.stopPropagation();
+        seekToTrack(track, true);
+    });
+    copyButton.addEventListener("click", event => {
+        event.stopPropagation();
+        copyTrackLink(track, copyButton);
+    });
+    track.addEventListener("click", () => seekToTrack(track, true));
+});
+
+widget.ready.then(() => {
+    status.textContent = "Player ready";
+    const initialTime = getInitialTime();
+    if (initialTime !== null) {
+        const initialTrack = getTrackForTime(initialTime);
+        if (initialTrack) setActiveTrack(initialTrack);
+        setTimeout(async () => {
+            try {
+                const success = await widget.seek(initialTime);
+                if (success) {
+                    status.textContent = initialTrack
+                        ? "Starting at " + initialTrack.querySelector(".track-time").textContent +
+                          " — " + initialTrack.querySelector(".track-artist").textContent +
+                          " – " + initialTrack.querySelector(".track-title").textContent
+                        : "Starting at " + Math.floor(initialTime/60) + ":" +
+                          String(Math.floor(initialTime%60)).padStart(2,"0");
+                } else status.textContent = "The requested timestamp could not be loaded.";
+            } catch (error) {
+                console.error(error);
+                status.textContent = "Could not seek to the requested timestamp.";
+            }
+        }, 500);
+    }
+});
+
+widget.events.progress.on((position, duration) => {
+    const currentTrack = getTrackForTime(position);
+    if (currentTrack && document.querySelector(".track.active") !== currentTrack)
+        setActiveTrack(currentTrack);
+});
+widget.events.play.on(() => {
+    const active = document.querySelector(".track.active");
+    status.textContent = active
+        ? "Playing — " + active.querySelector(".track-artist").textContent +
+          " – " + active.querySelector(".track-title").textContent
+        : "Playing";
+});
+widget.events.pause.on(() => {
+    const active = document.querySelector(".track.active");
+    status.textContent = active
+        ? "Paused — " + active.querySelector(".track-artist").textContent +
+          " – " + active.querySelector(".track-title").textContent
+        : "Paused";
+});
+widget.events.ended.on(() => status.textContent = "Finished");
+widget.events.error.on(error => {
+    console.error("Mixcloud player error:", error);
+    status.textContent = "Mixcloud player error.";
+});
+</script>
+</body>
+</html>
